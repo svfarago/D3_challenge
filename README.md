@@ -1,5 +1,5 @@
 # D3 Challenge
-* This project uses Javascript, Plotly, CSS, and HTML
+* This project uses JavaScript, D3.js, SVG, CSS, and HTML
 
 ## ReadMe File
 * Updated: April 1, 2021 | Created: April 1, 2021
@@ -10,8 +10,9 @@
 ![2-census](2-images.jpg)
 
 The data set included with the assignment is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/).
-The current data set includes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
-Create a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
+The current data set includes data on rates of income, obesity, poverty, etc. by state. 
+
+Create a scatter plot between two of the data variables "Smokers vs. Age".
 
 
 ### Configuration Instructions ========
@@ -21,7 +22,7 @@ Create a scatter plot between two of the data variables such as `Healthcare vs. 
 ### Installation Instructions ==========
 Applications used:
 
-- Javascript / D3
+- Javascript / .D3 / svg
 - Google Chrome browser
 - Visual Studio Code + Live Server
 - GitBash terminal
@@ -79,7 +80,13 @@ Applications used:
 * Resources used to build and troubleshoot this code are listed below, in addition to help and code peer review from students, instructor, and TA's.
 
 * Web URLs:
-- 
+- https://www.d3indepth.com/scales/
+- https://observablehq.com/@d3/d3-extent
+- https://website.education.wisc.edu/~swu28/d3t/visualization.html
+- https://www.d3-graph-gallery.com/graph/scatter_basic.html
+- http://tutorials.jenkov.com/svg/g-element.html
+- https://stackoverflow.com/questions/55988709/how-can-i-add-labels-inside-the-points-in-a-scatterplot
+- https://stackoverflow.com/questions/17343338/difference-between-functiond-and-functiond-i/17345375
 
 * URLs last used: April 1, 2021
 
@@ -89,4 +96,4 @@ Colorado   United States
 
 
 ### Random Notes ===============
-* This project uses Javascript, D3, CSS, and HTML  ||  Time to complete: approximately xx hours
+* This project uses JavaScript, D3.js, SVG, CSS, and HTML  ||  Time to complete: approximately xx hours
