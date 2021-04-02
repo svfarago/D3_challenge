@@ -1,3 +1,12 @@
+// ==========Import csv data related to age and smoking =======================
+// POTATO - if errors occur then move this section of code down.
+d3.csv("assets/data/data.csv").then(function(CensusData) {
+    CensusData.forEach(function(data) {
+      data.age = +data.age;
+      data.smokes = +data.smokes;
+      console.log(data);
+ });
+
 //============Set up chart area =====================
 
 var margin = {
@@ -21,18 +30,14 @@ var svg = d3
   .select("#scatter")  // divID "scatter" in HTML to place chart
   .append("svg")
   .attr("height", svgHeight)
-  .attr("width", svgWidth);
+  .attr("width", svgWidth)
+  .classed("stateCircle", true)
+  .attr("opacity", 0.75)
+  .attr("stroke-width", "2");
 
   var chartGroup = svg.append("g") // use g element to group shapes; must use "transform, translate" with "g" to support x/y axis attribute such as margins
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// ==========Import csv data related to age and smoking =======================
-d3.csv("assets/data/data.csv").then(function(CensusData) {
-  CensusData.forEach(function(data) {
-    data.age = +data.age;
-    data.smokes = +data.smokes;
-    console.log(data);
-  });
 
   // ==============Create Scales====================
   // Exercise 16/2/4 on 4/1
@@ -40,28 +45,26 @@ d3.csv("assets/data/data.csv").then(function(CensusData) {
   const xScale = d3.scaleLinear()
     .domain(d3.extent(CensusData, d => d.age)) // use d3.extend to return min and max range of data.age
     .range([0, width])
-    .nice(); // rounds values
+    //.nice(); // rounds values POTATO needed?
 
   const yScale = d3.scaleLinear()
     .domain(d3.extent(CensusData, d => d.smokes))
     //.domain([6,d3.max(CensusData, d => d.smokes)]) // use d3.max to return max range of data.smokes
     .range([height, 0])
-    .nice(); // rounds values
+    //.nice(); // rounds values POTATO needed?
   
 
 //============Generate scatter plot=========
-chartGroup.selectAll("circle")
-.data(CensusData)
-.enter()
-.append("circle")
-.attr("cx", d=>xScale(d.age)) // Replace data with data.age on xScale
-.attr("cy", d=>yScale(d.smokes)) // Replace data with data.smokes on yScale
-.attr("r", "15")
+    chartGroup.selectAll("circle")
+    .data(CensusData)
+    .enter()
+    .append("circle")
+    .attr("cx", d=>xScale(d.age)) // Replace data with data.age on xScale
+    .attr("cy", d=>yScale(d.smokes)) // Replace data with data.smokes on yScale
+    .attr("r", "15")
+    .style("fill", "#5f96b6")
 
 
-
-//}).catch(function(error) {
-//  console.log(error);
 });
 
 

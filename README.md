@@ -2,7 +2,7 @@
 * This project uses JavaScript, D3.js, SVG, CSS, and HTML
 
 ## ReadMe File
-* Updated: April 1, 2021 | Created: April 1, 2021
+* Updated: April 2, 2021 | Created: April 1, 2021
 * Copyright: open source
 
 
@@ -32,21 +32,21 @@ Applications used:
 
 
 ### List of Files ====================
--   \D3_challenge
--       index.html
--       README.md
--       D3 Project.md
--       \assets
--           \css
--               d3Stylecss
--                style.css
--            \data
--               data.csv
--            \js
--               .eslintrc.json
-                app.js
--       \Images
--             (list of images here)
+   \D3_challenge
+       index.html
+       README.md
+       D3 Project.md
+       \assets
+           \css
+               d3Stylecss
+                style.css
+            \data
+               data.csv
+            \js
+               .eslintrc.json
+               app.js
+       \Images
+             (list of images here)
 
 
 ### Operating Instructions =============
@@ -83,7 +83,7 @@ Applications used:
 - https://www.d3indepth.com/scales/
 - https://observablehq.com/@d3/d3-extent
 - https://website.education.wisc.edu/~swu28/d3t/visualization.html
-- https://www.d3-graph-gallery.com/graph/scatter_basic.html
+- https://www.d3-graph-gallery.com/graph/scatter_basic.html  << Really great resource
 - http://tutorials.jenkov.com/svg/g-element.html
 - https://stackoverflow.com/questions/55988709/how-can-i-add-labels-inside-the-points-in-a-scatterplot
 - https://stackoverflow.com/questions/17343338/difference-between-functiond-and-functiond-i/17345375
