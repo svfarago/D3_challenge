@@ -59,8 +59,8 @@ var svg = d3
     .data(CensusData)
     .enter()
     .append("circle")
-    .attr("cx", d=>xScale(d.age)) // Replace data with data.age on xScale
-    .attr("cy", d=>yScale(d.smokes)) // Replace data with data.smokes on yScale
+    .attr("cx", d=>xScale(d.age)) // Replaces data with data.age on xScale
+    .attr("cy", d=>yScale(d.smokes)) // Replaces data with data.smokes on yScale
     .attr("r", "15")
     .style("fill", "#5f96b6")
 
