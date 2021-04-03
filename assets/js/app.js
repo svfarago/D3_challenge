@@ -9,17 +9,18 @@ d3.csv("assets/data/data.csv").then(function(CensusData) {
 
 //============Set up chart area =====================
 
+
+// SVG Container - Way to calculate margins and chart height/width using variables
+// Potato - can any of this be hardcoded to var svg below to simplify code?
+var svgHeight = 600;
+var svgWidth = 800;
+
 var margin = {
   top: 20,
   bottom: 60,
   left: 20,
   right: 20,
 };
-
-// Way to calculate margins and chart height/width using variables
-// Potato - can any of this be hardcoded to var svg below to simplify code?
-var svgHeight = 600;
-var svgWidth = 800;
 
 var height = svgHeight - margin.top - margin.bottom;
 var width = svgWidth - margin.left - margin.right;
@@ -40,7 +41,7 @@ var svg = d3
 
 
   // ==============Create Scales====================
-  // Exercise 16/2/4 on 4/1
+  // Exercise 16/2/4 on 4/1 and 16/2/5 on 4/3
   // d, i = data and index
   const xScale = d3.scaleLinear()
     .domain(d3.extent(CensusData, d => d.age)) // use d3.extend to return min and max range of data.age
