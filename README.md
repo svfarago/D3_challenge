@@ -46,7 +46,10 @@ Applications used:
         - .eslintrc.json
         - app.js
 - \Images
-- (list of images here)
+-   4-scatter_hw.png
+-   5-correl_hw.png
+-   5-excel_hw.png
+-   9-responsive-d3_hw.png
 
 
 ### Operating Instructions =============
@@ -62,9 +65,6 @@ Applications used:
 
 * Dataset provided: 
 - The data set included with the assignment is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/). - The current data set includes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
-
-### Additional Resources =======================
-* None.
 
 
 ###  Data Alterations =======================
