@@ -1,11 +1,11 @@
 // ==========Import csv data related to age and smoking =======================
 // POTATO - if errors occur then move this section of code down.
 d3.csv("assets/data/data.csv").then(function(CensusData) {
-    CensusData.forEach(function(data) {
-      data.age = +data.age;
+    CensusData.forEach(function(data) { //data could be "d"
+      data.age = +data.age;  //assign whatever data type is in data.age back as an integer (that's what the + does)  | in other words cast the data into another type
       data.smokes = +data.smokes;
       console.log(data);
- });
+ }); // ends THEn call (put a note of what you are ending - helps keep track)
 
 //============Set up chart area =====================
 
@@ -36,19 +36,23 @@ var svg = d3
   .attr("opacity", 0.75)
   .attr("stroke-width", "2");
 
-  var chartGroup = svg.append("g") // use g element to group shapes; must use "transform, translate" with "g" to support x/y axis attribute such as margins
+  var chartGroup = svg.append("g") // use g (group) element to group shapes; must use "transform, translate" with "g" to support x/y axis attribute such as margins
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 
   // ==============Create Scales====================
   // Exercise 16/2/4 on 4/1 and 16/2/5 on 4/3
   // d, i = data and index
-  const xScale = d3.scaleLinear()
+  //POTATO - why "const" and not "var"
+  const xScale = d3.scaleLinear() //scaleLinear = for age column
     .domain(d3.extent(CensusData, d => d.age)) // use d3.extend to return min and max range of data.age
     .range([0, width])
     //.nice(); // rounds values POTATO needed?
 
-  const yScale = d3.scaleLinear()
+  const yScale = d3.scaleLinear() //scaleLinear = for smokes column
+    //POTATO why are both scaleLinear and one not scaleBand? exercise 16/2/6; maybe because we haven't created axes yet of  - assign 16/2/6
+    //var yAxis = d3.axisLeft(yScale);
+    //var xAxis = d3.axisBottom(xScale);
     .domain(d3.extent(CensusData, d => d.smokes))
     //.domain([6,d3.max(CensusData, d => d.smokes)]) // use d3.max to return max range of data.smokes
     .range([height, 0])
