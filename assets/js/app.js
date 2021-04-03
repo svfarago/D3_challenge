@@ -59,15 +59,17 @@ var svg = d3
     .nice(); // rounds axis values
   
 
-//=======Generate scatter plot=========
+//=======Create scatter plot=========
     chartGroup.selectAll("circle")
     .data(CensusData)
     .enter()
     .append("circle")
-    .attr("cx", d=>xScale(d.obesity)) // Replaces data with data.obesity on xScale
-    .attr("cy", d=>yScale(d.smokes)) // Replaces data with data.smokes on yScale
-    .attr("r", "18")
-    .style("fill", "#164270")
+        .attr("cx", d=>xScale(d.obesity)) // Replaces data with data.obesity on xScale
+        .attr("cy", d=>yScale(d.smokes)) // Replaces data with data.smokes on yScale
+        .attr("r", "15")
+        .style("fill", "#164270")
+        .attr("opacity", ".75");
+
 
   //========Create Axes=========================
   var xAxis = d3.axisBottom(xScale);
@@ -84,29 +86,33 @@ chartGroup.append("g")
   .data(CensusData)
   .enter()
   .append("text")
-  .text(d=>d.abbr) // Changes full state name to state abbreviation
-  .attr("x",d=>xScale(d.obesity))
-  .attr("y",d=>yScale(d.smokes))
-  .classed(".stateText", true)
-  .attr("text-anchor", "middle")
-  .attr("alignment-baseline", "central"); // centers State in circles
+      .text(d=>d.abbr) // Changes full state name to state abbreviation
+      .attr("x",d=>xScale(d.obesity))
+      .attr("y",d=>yScale(d.smokes))
+      .classed(".stateText", true)
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "central"); // centers State in circles
   
   //============add axes titles=========
   chartGroup.append("text")
         .attr("transform", `translate(${width / 2}, ${height + margin.top + 10})`)
         .attr("text-anchor", "middle")
         .attr("font-size", "14px")
-
+ //       .attr("color", "black")
 //        .style("font-weight", "bold")
+.attr("fill", "red")
+.attr("font-family","sans-serif")
         .text("Population % Obesity");
 
-        chartGroup.append("text")
+  chartGroup.append("text")
         .attr("y", 0 - ((margin.left / 2) + 2))
         .attr("x", 0 - (height / 2))
         .attr("text-anchor", "middle")
         .attr("font-size", "14px")
 //        .style("font-weight", "bold")
         .attr("transform", "rotate(-90)")
+        .attr("fill", "red")
+        .attr("font-family","sans-serif")
         .text("Smokers (%)");
 
   

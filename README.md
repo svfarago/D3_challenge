@@ -2,7 +2,7 @@
 * This project uses JavaScript, D3.js, SVG, CSS, and HTML
 
 ## ReadMe File
-* Updated: April 2, 2021 | Created: April 1, 2021
+* Updated: April 3, 2021 | Created: April 1, 2021
 * Copyright: open source
 
 
@@ -50,9 +50,10 @@ Applications used:
 
 
 ### Operating Instructions =============
-*All pages hosted on GitHub Pages.
+*All pages hosted on GitHub Pages. The index.html page is designed to run from local server/machine. Otherwise CORS error may result. Web pages are not hosted on a central server.
 
-1. Click to launch interactive dashboard: xxxx
+1. Open index.html in a browser using local hosting/server
+2. Data results are pulled from apps.js file
 
 
 
@@ -82,13 +83,13 @@ Applications used:
 * Web URLs:
 - https://www.d3indepth.com/scales/
 - https://observablehq.com/@d3/d3-extent
+- http://tutorials.jenkov.com/svg/g-element.html
 - https://website.education.wisc.edu/~swu28/d3t/visualization.html
 - https://www.d3-graph-gallery.com/graph/scatter_basic.html  << Really great resource
-- http://tutorials.jenkov.com/svg/g-element.html
 - https://stackoverflow.com/questions/55988709/how-can-i-add-labels-inside-the-points-in-a-scatterplot
 - https://stackoverflow.com/questions/17343338/difference-between-functiond-and-functiond-i/17345375
 
-* URLs last used: April 1, 2021
+* URLs last used: April 3, 2021
 
 
 ###  Contact Information ===============
