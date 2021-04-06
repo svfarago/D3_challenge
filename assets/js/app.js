@@ -11,7 +11,7 @@ d3.csv("assets/data/data.csv").then(function(CensusData) {
 // Notes: Use variables to calculate margins and chart height/width
 
 var svgHeight = 700;
-var svgWidth = 1000;
+var svgWidth = 1200;
 
 var margin = {
   top: 20,
@@ -33,7 +33,6 @@ var svg = d3
     .attr("width", svgWidth)
     .classed("stateCircle", true)
     .attr("opacity", 0.75);
-
 
 
 // Notes: use "g" (group) element to group shapes; must use "transform, translate" with "g" to support x/y axis attribute such as margins
@@ -114,4 +113,3 @@ chartGroup.append("g")
         .attr("transform", "rotate(-90)");
 
 });
-
