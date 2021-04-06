@@ -48,14 +48,13 @@ Applications used:
 - \Images
 -   4-scatter_hw.png
 -   5-correl_hw.png
--   5-excel_hw.png
--   9-responsive-d3_hw.png
+-   6-excel_hw.png
 
 
 ### Operating Instructions =============
 *All pages hosted on GitHub Pages. The index.html page is designed to run from local server/machine. Otherwise CORS error may result. Web pages are not hosted on a central server.
 
-1. Open index.html in a browser using local hosting/server
+1. Open index.html in a browser using local hosting/server (example: in VS Code, right click and select "open with Live Server" (requires LiveServer to be installed in VS Code).
 2. Data results are pulled from apps.js file
 
 
