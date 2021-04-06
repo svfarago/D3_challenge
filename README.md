@@ -2,7 +2,7 @@
 * This project uses JavaScript, D3.js, SVG, CSS, and HTML
 
 ## ReadMe File
-* Updated: April 3, 2021 | Created: April 1, 2021
+* Updated: April 6, 2021 | Created: April 1, 2021
 * Copyright: open source
 
 
@@ -16,7 +16,7 @@ Create a scatter plot between two of the data variables "Smokers vs. Age".
 
 
 ### Configuration Instructions ========
-* 
+* None.
 
 
 ### Installation Instructions ==========
@@ -81,15 +81,17 @@ Applications used:
 * Resources used to build and troubleshoot this code are listed below, in addition to help and code peer review from students, instructor, and TA's.
 
 * Web URLs:
+- https://github.com/d3/d3-axis
 - https://www.d3indepth.com/scales/
 - https://observablehq.com/@d3/d3-extent
 - http://tutorials.jenkov.com/svg/g-element.html
+- https://observablehq.com/@uwdata/introduction-to-d3
 - https://website.education.wisc.edu/~swu28/d3t/visualization.html
 - https://www.d3-graph-gallery.com/graph/scatter_basic.html  << Really great resource
 - https://stackoverflow.com/questions/55988709/how-can-i-add-labels-inside-the-points-in-a-scatterplot
 - https://stackoverflow.com/questions/17343338/difference-between-functiond-and-functiond-i/17345375
 
-* URLs last used: April 3, 2021
+* URLs last used: April 6, 2021
 
 
 ###  Contact Information ===============

@@ -11,12 +11,12 @@ d3.csv("assets/data/data.csv").then(function(CensusData) {
 // Notes: Use variables to calculate margins and chart height/width
 
 var svgHeight = 700;
-var svgWidth = 900;
+var svgWidth = 1000;
 
 var margin = {
   top: 20,
   bottom: 60,
-  left: 40,
+  left: 80,
   right: 10,
 };
 
@@ -48,6 +48,7 @@ var xScale = d3.scaleLinear()
     .range([0, width])
     .nice(); // rounds axis values
 
+
 var yScale = d3.scaleLinear()
     .domain(d3.extent(CensusData, d => d.smokes))
     //.domain([6,d3.max(CensusData, d => d.smokes)]) // use d3.max to return max range of data.smokes
@@ -63,17 +64,19 @@ chartGroup.selectAll("circle")
         .attr("cx", d=>xScale(d.obesity)) // Replaces data with data.obesity on xScale
         .attr("cy", d=>yScale(d.smokes)) // Replaces data with data.smokes on yScale
         .attr("r", "15")
-        //.style("fill", "#164270") //to change circle colors
+        //.style("fill", "#164270") //to override css style and change circle colors
         .attr("opacity", ".75");
 
 
 //----- Create Axes -----
+// Obesity = x; Smokers=y
 var xAxis = d3.axisBottom(xScale);
 var yAxis = d3.axisLeft(yScale);
 
 
 //----- Add Axes to chartGroup ("g") -----
 // Notes: transform moves axis to the bottom of the visualization
+// Notes: May need to use "elements" in Console to dig into style formatting code for "g"
 chartGroup.append("g").attr("transform", `translate(0, ${height})`).call(xAxis);
 chartGroup.append("g").call(yAxis);
 
@@ -89,7 +92,7 @@ chartGroup.append("g")
         .attr("y",d=>yScale(d.smokes))
         .classed(".stateText", true)
         .attr("text-anchor", "middle")
-        .attr("font-size", "14px")
+        .attr("font-size", "12px")
         .attr("alignment-baseline", "central"); // centers State in circles
   
         
@@ -100,7 +103,6 @@ chartGroup.append("g")
         .attr("font-size", "14px")
         .text("Population % Obesity");
 
-
         
   chartGroup.append("text")
         .attr("y", 0 - ((margin.left / 2) + 2))
@@ -110,8 +112,6 @@ chartGroup.append("g")
         .attr("dy", "1em")
         .text("Smokers (%)")
         .attr("transform", "rotate(-90)");
-
- 
 
 });
 
