@@ -10,10 +10,7 @@
 ![2-census](2-census.jpg)
 
 The data set included with the assignment is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/).
-The current data set includes data on rates of income, obesity, poverty, etc. by state. 
-
-Create a scatter plot between two of the data variables "Smokers vs. Obesity".
-![Smoking vs Obesity](/Images/4-scatter_hw.png)
+The current data set includes data on rates of income, obesity, poverty, etc. by state. A scatter plot analysis was performed between two of the data variables "Smokers vs. Obesity".
 
 
 
@@ -24,7 +21,6 @@ Create a scatter plot between two of the data variables "Smokers vs. Obesity".
 ### Installation Instructions ==========
 Applications used:
 
-- Javascript / .D3 / svg
 - Google Chrome browser
 - Visual Studio Code + Live Server
 - GitBash terminal
@@ -100,4 +96,4 @@ Colorado   United States
 
 
 ### Random Notes ===============
-* This project uses JavaScript, D3.js, SVG, CSS, and HTML  ||  Time to complete: approximately xx hours
+* This project uses JavaScript, D3.js, SVG, CSS, and HTML  ||  Time to complete: approximately 15 hours
