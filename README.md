@@ -12,7 +12,9 @@
 The data set included with the assignment is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/).
 The current data set includes data on rates of income, obesity, poverty, etc. by state. 
 
-Create a scatter plot between two of the data variables "Smokers vs. Age".
+Create a scatter plot between two of the data variables "Smokers vs. Obesity".
+![./Images/4-scatter_hw.png](4-scatter_hw.png)
+
 
 
 ### Configuration Instructions ========
